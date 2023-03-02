@@ -1,0 +1,75 @@
+<idea-plugin>
+    <id>com.aiSolution.hack</id>
+    <name>AISmartSolution</name>
+    <vendor email="smartWorksSmartSolution@mymail.com">**Smart Works:Smart Solutions**</vendor>
+    <description><![CDATA[
+    <p><b>Openai solution as your copilot to level up your developer experience.</b></p>
+    <p>This is the perfect assistant for any programmer who wants to improve their coding skills and make more efficient use of the time.</p>
+    <p>This plugin also provides a extra filter to identify CID data.</p>
+    <br />
+    <span>Available Functionality</span>
+    <ul>
+        <li><b>Find bugs:</b> Analyze and find bugs in your code. Right-click on a selected block of code, run command.</li>
+        <li><b>Add tests:</b> Write tests for you. Right-click on a selected block of code, run command.</li>
+        <li><b>Refactor:</b> Refactor your code. Right-click on a selected block of code, run command.</li>
+        <li><b>Optimize:</b> Add suggestions to your code to improve. Right-click on a selected block of code, run command.</li>
+        <li><b>Explain:</b> Explain the selected code. Right-click on a selected block of code, run command.</li>
+        <li><b>Write Unit Tests:</b> Write Unit tests for a selected class. Right-click on a selected block of code, run command.</li>
+    </ul>
+    <br />
+    <p><b>Before using the plugin, it is necessary to configure the API key in the Settings → Tools → OpenAI</b></p>
+  ]]></description>
+
+    <depends>com.intellij.modules.platform</depends>
+
+    <applicationListeners>
+        <listener
+            class="com.aiSolution.hack.ide.toolwindow.ToolWindowService"
+            topic="com.intellij.ide.ui.LafManagerListener"/>
+    </applicationListeners>
+
+    <extensions defaultExtensionNs="com.intellij">
+        <applicationConfigurable parentId="tools" instance="com.aiSolution.hack.ide.settings.SettingsConfigurable"
+            id="org.intellij.sdk.settings.AppSettingsConfigurable"
+            displayName="AI Asisstant"/>
+        <applicationService serviceImplementation="com.aiSolution.hack.ide.settings.SettingsState"/>
+        <applicationService serviceImplementation="com.aiSolution.hack.ide.toolwindow.ToolWindowService"/>
+        <toolWindow id="AI Asisstant" icon="Icons.DefaultIcon" anchor="right"
+            factoryClass="com.aiSolution.hack.ide.toolwindow.AISolutionToolWindowFactory"/>
+
+        <notificationGroup id="ChatGPT-Empty-API-Key"
+            displayType="STICKY_BALLOON"
+            key="com.aiSolution.hack.ide.notification.key"/>
+    </extensions>
+
+    <resource-bundle>messages.BasicActionsBundle</resource-bundle>
+
+    <actions>
+        <group id="com.aiSolution.hack.ide.action.ActionGroup"
+            class="com.aiSolution.hack.ide.action.ActionGroup"
+            popup="true">
+            <add-to-group group-id="EditorPopupMenu" anchor="first"/>
+
+            <action id="com.aiSolution.hack.ide.action.WriteTestsAction" class="com.aiSolution.hack.ide.action.WriteTestsAction">
+            </action>
+            <action id="com.aiSolution.hack.ide.action.FindBugsAction" class="com.aiSolution.hack.ide.action.FindBugsAction">
+            </action>
+            <action id="com.aiSolution.hack.ide.action.RefactorAction" class="com.aiSolution.hack.ide.action.RefactorAction">
+            </action>
+            <action id="com.aiSolution.hack.ide.action.OptimizeAction" class="com.aiSolution.hack.ide.action.OptimizeAction">
+            </action>
+            <action id="com.aiSolution.hack.ide.action.ExplainAction" class="com.aiSolution.hack.ide.action.ExplainAction">
+            </action>
+
+        </group>
+
+        <action
+            id="com.aiSolution.hack.ide.action.AskAction"
+            class="com.aiSolution.hack.ide.action.AskAction"
+            text="Ask"
+            description="TBD"
+            icon="Icons.DefaultIcon">
+            <add-to-group group-id="EditorPopupMenu" anchor="first"/>
+        </action>
+    </actions>
+</idea-plugin>
