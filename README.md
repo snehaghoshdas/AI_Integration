@@ -4,6 +4,8 @@ This plugin also provides a extra filter to identify CID data.
 
 ## Installation
 You can install it directly from your IDE via the `File | Settings/Preferences | Plugins` screen.
+Add your API key via 'Settings |AI Assistant'.
+Select a text from your code --> right click--> AI Assistant Options. You can also use shortcut keys given in Editor popup menu for AI Assistant options.
 
 ## Available features
 The main features of this plugin include:
@@ -16,7 +18,7 @@ The main features of this plugin include:
 - <b>Calculate TimeComplexity:</b>Calculates Time complexity of the selected code 
 - <b>Add Comment:</b> Add comment to selected code.
 
-- <img src="/Users/in-sarang.kulkarni/neha/AI_Integration/Screenshot 2023-03-03 at 11.30.19 AM.png"></img>
+- <img src="classpath:/Screenshot 2023-03-03 at 11.30.19 AM.png"></img>
 
 - References:
 https://github.com/carlrobertoh/CodeGPT
