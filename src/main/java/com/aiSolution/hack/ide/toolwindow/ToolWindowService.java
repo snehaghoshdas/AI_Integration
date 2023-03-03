@@ -61,8 +61,7 @@ public class ToolWindowService implements LafManagerListener {
 
     var settings = SettingsState.getInstance();
     if (settings.isGPTOptionSelected && settings.apiKey.isEmpty()) {
-      notifyMissingCredential(project, "API key not provided.");
-    } else if (settings.isChatGPTOptionSelected && settings.accessToken.isEmpty()) {
+      notifyMissingCredential(project, "API key not provided.");} else if (settings.isChatGPTOptionSelected && settings.accessToken.isEmpty()) {
       notifyMissingCredential(project, "Access token not provided.");
     } else {
       var textArea = new SyntaxTextArea();

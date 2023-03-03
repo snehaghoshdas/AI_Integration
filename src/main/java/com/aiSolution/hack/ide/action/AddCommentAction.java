@@ -2,14 +2,14 @@ package com.aiSolution.hack.ide.action;
 
 import com.intellij.openapi.wm.ToolWindow;
 
-public class WriteTestsAction extends BaseAction {
+public class AddCommentAction extends BaseAction {
 
   protected String getPrompt(String selectedText) {
-    return "Generate Junit tests for the following class:\n" + selectedText;
+    return "Add Comments to selected code:\n" + selectedText;
   }
 
   protected void initToolWindow(ToolWindow toolWindow) {
-    toolWindow.setTitle("Write Tests");
+    toolWindow.setTitle("Add Comments");
     toolWindow.show();
   }
 }
