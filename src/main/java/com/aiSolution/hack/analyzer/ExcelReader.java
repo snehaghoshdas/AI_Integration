@@ -16,7 +16,7 @@ import java.util.List;
 public class ExcelReader {
     public static String cidcheck(String queryText) {
         try {
-            FileInputStream excelFile = new FileInputStream(new File("/Users/in-sarang.kulkarni/neha/Scratchpad_hackathon/Book1.xlsx"));
+            FileInputStream excelFile = new FileInputStream(new File("/Users/in-sarang.kulkarni/neha/AI_Integration/Book1.xlsx"));
             Workbook workbook = new XSSFWorkbook(excelFile);
             Sheet sheet = workbook.getSheetAt(0);
             String[] tokens = queryText.split(" "); // split the string into tokens based on the space character

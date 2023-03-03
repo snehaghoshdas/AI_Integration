@@ -13,4 +13,9 @@ The main features of this plugin include:
 - <b>Refactor:</b> Refactor your code. 
 - <b>Optimize:</b> Add suggestions to your code to improve.
 - <b>Explain:</b> Explain the selected code.
+- <b>Calculate TimeComplexity:</b>Calculates Time complexity of the selected code 
 - <b>Add Comment:</b> Add comment to selected code.
+
+- <img src="/Users/in-sarang.kulkarni/neha/AI_Integration/Screenshot 2023-03-03 at 11.30.19 AM.png"></img>
+
+
