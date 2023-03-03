@@ -18,4 +18,7 @@ The main features of this plugin include:
 
 - <img src="/Users/in-sarang.kulkarni/neha/AI_Integration/Screenshot 2023-03-03 at 11.30.19 AM.png"></img>
 
+- References:
+https://github.com/carlrobertoh/CodeGPT
+
 
