@@ -18,7 +18,7 @@ The main features of this plugin include:
 - <b>Calculate TimeComplexity:</b>Calculates Time complexity of the selected code 
 - <b>Add Comment:</b> Add comment to selected code.
 
-- <img src="classpath:/Screenshot 2023-03-03 at 11.30.19 AM.png"></img>
+- <img src="Screenshot 2023-03-03 at 11.30.19 AM.png"></img>
 
 - References:
 https://github.com/carlrobertoh/CodeGPT
