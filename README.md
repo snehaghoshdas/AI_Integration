@@ -13,3 +13,4 @@ The main features of this plugin include:
 - <b>Refactor:</b> Refactor your code. 
 - <b>Optimize:</b> Add suggestions to your code to improve.
 - <b>Explain:</b> Explain the selected code.
+- <b>Add Comment:</b> Add comment to selected code.

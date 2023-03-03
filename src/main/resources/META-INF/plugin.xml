@@ -49,7 +49,7 @@
         <group id="com.aiSolution.hack.ide.action.ActionGroup"
             class="com.aiSolution.hack.ide.action.ActionGroup"
             popup="true" >
-            <add-to-group group-id="EditorPopupMenu" anchor="first"/>
+            <add-to-group group-id="EditorPopupMenu" anchor="last"/>
 
             <action id="com.aiSolution.hack.ide.action.WriteTestsAction" class="com.aiSolution.hack.ide.action.WriteTestsAction">
                 <keyboard-shortcut first-keystroke="control alt A" second-keystroke="T" keymap="$default"/>
@@ -71,6 +71,10 @@
             <action id="com.aiSolution.hack.ide.action.TimeComplexityAction" class="com.aiSolution.hack.ide.action.TimeComplexityAction">
                 <keyboard-shortcut first-keystroke="control alt A" second-keystroke="C" keymap="$default"/>
             </action>
+            <action id="com.aiSolution.hack.ide.action.AddCommentAction" class="com.aiSolution.hack.ide.action.AddCommentAction">
+                <keyboard-shortcut first-keystroke="control alt A" second-keystroke="K" keymap="$default"/>
+            </action>
+
 
 
         </group>

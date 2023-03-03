@@ -8,6 +8,7 @@ import org.apache.commons.io.FileUtils;
 
 import java.io.File;
 import java.io.IOException;
+import java.nio.charset.Charset;
 import java.util.function.Consumer;
 
 public class OpenAiBodySubscriber extends Subscriber<OpenAiResponse> {
@@ -26,9 +27,9 @@ public class OpenAiBodySubscriber extends Subscriber<OpenAiResponse> {
   protected void onRequestComplete() {
     if(messageBuilder.toString().contains("@Test")) {
       String filtered = messageBuilder.toString().replaceAll("```java", " ");
-      File file = new File("C:\\Users\\admin\\IdeaProjects\\zinkworks\\atm\\src\\test\\java\\");
+      File file = new File("/Users/in-sarang.kulkarni/neha/kafka-practice/producer/src/test/java/Test.java");
       try {
-        FileUtils.writeStringToFile(file, filtered);
+        FileUtils.writeStringToFile(file, filtered, Charset.defaultCharset());
       } catch (IOException e) {
         throw new RuntimeException(e);
       }
