@@ -35,7 +35,6 @@ public class OpenAiBodySubscriber extends Subscriber<OpenAiResponse> {
     }
     onCompleteCallback.accept(messageBuilder.toString());
   }
-
   protected void onErrorOccurred() {
     responseConsumer.accept("Something went wrong. Please try again later.");
   }

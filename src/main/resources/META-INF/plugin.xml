@@ -40,6 +40,7 @@
         <notificationGroup id="ChatGPT-Empty-API-Key"
             displayType="STICKY_BALLOON"
             key="com.aiSolution.hack.ide.notification.key"/>
+      <!--  <keymapExtension implementation="com.aiSolution.hack.ide.action.WriteTestsAction"></keymapExtension>-->
     </extensions>
 
     <resource-bundle>messages.BasicActionsBundle</resource-bundle>
@@ -47,19 +48,30 @@
     <actions>
         <group id="com.aiSolution.hack.ide.action.ActionGroup"
             class="com.aiSolution.hack.ide.action.ActionGroup"
-            popup="true">
+            popup="true" >
             <add-to-group group-id="EditorPopupMenu" anchor="first"/>
 
             <action id="com.aiSolution.hack.ide.action.WriteTestsAction" class="com.aiSolution.hack.ide.action.WriteTestsAction">
+                <keyboard-shortcut first-keystroke="control alt A" second-keystroke="T" keymap="$default"/>
             </action>
             <action id="com.aiSolution.hack.ide.action.FindBugsAction" class="com.aiSolution.hack.ide.action.FindBugsAction">
+                <keyboard-shortcut first-keystroke="control alt A" second-keystroke="B" keymap="$default"/>
             </action>
             <action id="com.aiSolution.hack.ide.action.RefactorAction" class="com.aiSolution.hack.ide.action.RefactorAction">
+                <keyboard-shortcut first-keystroke="control alt A" second-keystroke="R" keymap="$default"/>
             </action>
             <action id="com.aiSolution.hack.ide.action.OptimizeAction" class="com.aiSolution.hack.ide.action.OptimizeAction">
+                <keyboard-shortcut first-keystroke="control alt A" second-keystroke="O" keymap="$default"/>
+
             </action>
             <action id="com.aiSolution.hack.ide.action.ExplainAction" class="com.aiSolution.hack.ide.action.ExplainAction">
+                <keyboard-shortcut first-keystroke="control alt A" second-keystroke="E" keymap="$default"/>
+
             </action>
+            <action id="com.aiSolution.hack.ide.action.TimeComplexityAction" class="com.aiSolution.hack.ide.action.TimeComplexityAction">
+                <keyboard-shortcut first-keystroke="control alt A" second-keystroke="C" keymap="$default"/>
+            </action>
+
 
         </group>
 
@@ -71,5 +83,6 @@
             icon="Icons.DefaultIcon">
             <add-to-group group-id="EditorPopupMenu" anchor="first"/>
         </action>
+
     </actions>
 </idea-plugin>
